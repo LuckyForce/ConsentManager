@@ -9,3 +9,4 @@ const defaultCookie = window.localStorage.getItem("defaultCookie");
 const essentialCookie = window.localStorage.getItem("essentialCookie");
 const performanceCookie = window.localStorage.getItem("performanceCookie");
 const analyticsCookie = window.localStorage.getItem("analyticsCookie");
+const cookiesAcceptedOn = window.localStorage.getItem("cookiesAcceptedOn");
