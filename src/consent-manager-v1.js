@@ -7,6 +7,7 @@
 
 //Copied Console Class from https://github.com/LuckyForce/ConsoleDebugMode/blob/master/languages/js/console.js
 //I Copied this instead of importing it because the point of this is suppose to be a one filer project.
+//Copied Version: 1.0.1
 class Console {
     constructor() {
         this.debugMode = false;
@@ -97,9 +98,12 @@ class Console {
     }
 }
 
+//Create Console Object
 const Console = new Console();
+//Enable Debug Mode
 Console.enable();
 
+//Check if any Cookie types were already accepted.
 if (window.localStorage.getItem("defaultCookieAllowed") == true) {
     const defaultCookieAllowed = true;
 } else {
