@@ -5,13 +5,13 @@ This is going to be a js script that is fully customizable to add a ConsentManag
 ## How do you add the ConsentManager to your website?
 
 ```html
-<div id="cookie-manager"></div>
+<div id="consent-manager"></div>
 <script
-  src="https://www.adrian-schauer.at/projects/cookie-manager/consent-manager-v1.min.js"
+  src="https://www.adrian-schauer.at/projects/consent-manager/consent-manager-v1.min.js"
 >
   //Settings
   settings = {
-      title: "CookieManager",
+      title: "ConsentManager",
       text: "This website uses cookies to ensure you get the best experience on our website. By using our website you agree to our use of cookies.",
       button: "Accept",
       button_link: "https://www.adrian-schauer.at/projects/consent-manager/",
