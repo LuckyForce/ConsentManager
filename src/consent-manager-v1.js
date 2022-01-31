@@ -7,8 +7,8 @@
 
 //Copied Console Class from https://github.com/LuckyForce/ConsoleDebugMode/blob/master/languages/js/console.js
 //I Copied this instead of importing it because the point of this is suppose to be a one filer project.
-//Copied Version: 1.0.1
-class Console {
+//Copied Version: 1.0.2
+class DebugConsole {
     constructor() {
         this.debugMode = false;
     }
@@ -99,7 +99,7 @@ class Console {
 }
 
 //Create Console Object
-const Console = new Console();
+const Console = new DebugConsole();
 //Enable Debug Mode
 Console.enable();
 
