@@ -5,38 +5,134 @@
 //Version: 1.0.0
 //Description: This JavaScript file helps managing Cookie Selection in a completely custom way.
 
-if(window.localStorage.getItem("defaultCookieAllowed") == true){
+//Copied Console Class from https://github.com/LuckyForce/ConsoleDebugMode/blob/master/languages/js/console.js
+//I Copied this instead of importing it because the point of this is suppose to be a one filer project.
+class Console {
+    constructor() {
+        this.debugMode = false;
+    }
+    disable() {
+        this.debugMode = false;
+    }
+    enable() {
+        this.debugMode = true;
+    }
+    isEnabled() {
+        return this.debugMode;
+    }
+    log(message) {
+        if (this.debugMode) {
+            console.log(message);
+        }
+    }
+    error(message) {
+        if (this.debugMode) {
+            console.error(message);
+        }
+    }
+    warn(message) {
+        if (this.debugMode) {
+            console.warn(message);
+        }
+    }
+    info(message) {
+        if (this.debugMode) {
+            console.info(message);
+        }
+    }
+    assert(message) {
+        if (this.debugMode) {
+            console.assert(message);
+        }
+    }
+    clear() {
+        if (this.debugMode) {
+            console.clear();
+        }
+    }
+    count(message) {
+        if (this.debugMode) {
+            console.count(message);
+        }
+    }
+    countReset(message) {
+        if (this.debugMode) {
+            console.countReset(message);
+        }
+    }
+    group(message) {
+        if (this.debugMode) {
+            console.group(message);
+        }
+    }
+    groupCollapsed(message) {
+        if (this.debugMode) {
+            console.groupCollapsed(message);
+        }
+    }
+    groupEnd() {
+        if (this.debugMode) {
+            console.groupEnd();
+        }
+    }
+    time(message) {
+        if (this.debugMode) {
+            console.time(message);
+        }
+    }
+    timeEnd(message) {
+        if (this.debugMode) {
+            console.timeEnd(message);
+        }
+    }
+    timeLog(message) {
+        if (this.debugMode) {
+            console.timeLog(message);
+        }
+    }
+    table(message) {
+        if (this.debugMode) {
+            console.table(message);
+        }
+    }
+}
+
+const Console = new Console();
+Console.enable();
+
+if (window.localStorage.getItem("defaultCookieAllowed") == true) {
     const defaultCookieAllowed = true;
-}else{
+} else {
     const defaultCookieAllowed = false;
 }
-if(window.localStorage.getItem("essentialCookieAllowed") == true){
+if (window.localStorage.getItem("essentialCookieAllowed") == true) {
     const essentialCookieAllowed = true;
-}else{
+} else {
     const essentialCookieAllowed = false;
 }
-if(window.localStorage.getItem("analyticsCookieAllowed") == true){
+if (window.localStorage.getItem("analyticsCookieAllowed") == true) {
     const analyticsCookieAllowed = true;
-}else{
+} else {
     const analyticsCookieAllowed = false;
 }
-if(window.localStorage.getItem("advertisingCookieAllowed") == true){
+if (window.localStorage.getItem("advertisingCookieAllowed") == true) {
     const advertisingCookieAllowed = true;
-}else{
+} else {
     const advertisingCookieAllowed = false;
 }
-if(window.localStorage.getItem("cookiesAcceptedOn") !== null){
+if (window.localStorage.getItem("cookiesAcceptedOn") !== null) {
     const cookiesAcceptedOn = new Date(window.localStorage.getItem("cookiesAcceptedOn"));
-    if(cookiesAcceptedOn.getTime() < new Date(settings.cookiesChangedOn).getTime()){
+    if (cookiesAcceptedOn.getTime() < new Date(settings.consentInfoChangedOn).getTime()) {
         const showConsent = true;
         //Defines that consent was already given at some point int the past.
         const consentChanged = true;
     }
-}else{
+} else {
     const showConsent = true;
 }
 
 //Only Show Consent if Consent was given before change of settings
-if(showConsent){
-
-}
+if (showConsent) {
+    Console.log("Showing Consent");
+} else
+    Console.log("Not Showing Consent");
