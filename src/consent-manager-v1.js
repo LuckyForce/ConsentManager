@@ -104,6 +104,11 @@ const Console = new DebugConsole();
 Console.enable();
 
 //Check if any Cookie types were already accepted.
+if (window.localStorage.getItem("acknowledgedCookies") == true) {
+    const defaultCookieAllowed = true;
+}else{
+    const defaultCookieAllowed = false;
+}
 if (window.localStorage.getItem("defaultCookieAllowed") == true) {
     const defaultCookieAllowed = true;
 } else {
