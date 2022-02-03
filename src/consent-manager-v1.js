@@ -105,9 +105,9 @@ Console.enable();
 
 //Check if any Cookie types were already accepted.
 if (window.localStorage.getItem("acknowledgedCookies") == true) {
-    const defaultCookieAllowed = true;
+    const acknowledgedCookies = true;
 }else{
-    const defaultCookieAllowed = false;
+    const acknowledgedCookies = false;
 }
 if (window.localStorage.getItem("defaultCookieAllowed") == true) {
     const defaultCookieAllowed = true;
