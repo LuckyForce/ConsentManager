@@ -184,3 +184,9 @@ if (showConsent) {
     document.getElementsByTagName('body')[0].appendChild(div);
 } else
     Console.log("Not Showing Consent");
+
+//This Function will be called when a button is pushed in the ConsentManager
+//@param cookies, array of cookies with the given array number.
+function accepting(cookies) {
+
+}
