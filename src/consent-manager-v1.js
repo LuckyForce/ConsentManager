@@ -189,5 +189,5 @@ if (showConsent) {
 //This Function will be called when a button is pushed in the ConsentManager
 //@param cookies, array of cookies with the given array number.
 function accepting(cookies) {
-
+    Console.log("Accepting cookies")
 }
