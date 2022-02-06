@@ -146,7 +146,12 @@ if (showConsent) {
     Console.log("Showing Consent");
 
     //Creating Div to then display Consent.
-    div = document.createElement('div');
+    const div = document.createElement('div');
+
+    //First Test Data.
+    const title = document.createElement('h1');
+    title.textContent = 'Consent';
+    div.appendChild(title);
 
     //Adding Div to Website Body.
     document.getElementsByName('body')[0].appendChild(div);
