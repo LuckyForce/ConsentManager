@@ -150,6 +150,9 @@ if (showConsent) {
     //Creating Div to then display Consent.
     const div = document.createElement('div');
 
+    //Add necessary styles for the div
+    div.style.position = 'absolute';
+
     //Basic Settings
     //1. Title
     Console.log(settings.title);
