@@ -148,6 +148,11 @@ if (showConsent) {
     //Creating Div to then display Consent.
     const div = document.createElement('div');
 
+    //Basic Settings
+    //1. Title
+    //2. Info Text
+    //3. Button Text
+
     //First Test Data.
     const title = document.createElement('h1');
     title.textContent = 'Consent';
