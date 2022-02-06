@@ -190,4 +190,7 @@ if (showConsent) {
 //@param cookies, array of cookies with the given array number.
 function accepting(cookies) {
     Console.log("Accepting cookies")
+
+    //Making Consent Window Invisible
+    div.style.visibility = "hidden";
 }
