@@ -154,6 +154,6 @@ if (showConsent) {
     div.appendChild(title);
 
     //Adding Div to Website Body.
-    document.getElementsByName('body')[0].appendChild(div);
+    document.getElementsByTagName('body')[0].appendChild(div);
 } else
     Console.log("Not Showing Consent");
