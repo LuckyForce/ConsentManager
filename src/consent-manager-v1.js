@@ -143,6 +143,9 @@ if (window.localStorage.getItem("cookiesAcceptedOn") !== null) {
 
 //Only Show Consent if Consent was given before change of settings
 if (showConsent) {
+    //Creating Div to then display Consent.
+    div = document.createElement('div');
+
     Console.log("Showing Consent");
 } else
     Console.log("Not Showing Consent");
