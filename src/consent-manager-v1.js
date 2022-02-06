@@ -160,6 +160,12 @@ if (showConsent) {
     }
 
     //2. Info Text
+    Console.log(settings.infoText);
+    if (settings.infoText != null && typeof settings.infoText == 'string') {
+        let infoText = document.createElement('span');
+        infoText.textContent = settings.infoText;
+        div.appendChild(infoText);
+    }
     //3. Button Text
 
     //First Test Data.
