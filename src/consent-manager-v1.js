@@ -106,7 +106,7 @@ Console.enable();
 //Check if any Cookie types were already accepted.
 if (window.localStorage.getItem("acknowledgedCookies") == true) {
     const acknowledgedCookies = true;
-}else{
+} else {
     const acknowledgedCookies = false;
 }
 if (window.localStorage.getItem("defaultCookieAllowed") == true) {
@@ -156,9 +156,6 @@ if (showConsent) {
     //3. Button Text
 
     //First Test Data.
-    const title = document.createElement('h1');
-    title.textContent = 'Consent';
-    div.appendChild(title);
 
     //Adding Div to Website Body.
     document.getElementsByTagName('body')[0].appendChild(div);
