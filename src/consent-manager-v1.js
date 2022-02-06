@@ -129,15 +129,16 @@ if (window.localStorage.getItem("advertisingCookieAllowed") == true) {
 } else {
     const advertisingCookieAllowed = false;
 }
+let showConsent = false;
 if (window.localStorage.getItem("cookiesAcceptedOn") !== null) {
     const cookiesAcceptedOn = new Date(window.localStorage.getItem("cookiesAcceptedOn"));
     if (cookiesAcceptedOn.getTime() < new Date(settings.consentInfoChangedOn).getTime()) {
-        const showConsent = true;
+        showConsent = true;
         //Defines that consent was already given at some point int the past.
         const consentChanged = true;
     }
 } else {
-    const showConsent = true;
+    showConsent = true;
 }
 
 //Only Show Consent if Consent was given before change of settings
