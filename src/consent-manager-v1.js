@@ -175,6 +175,7 @@ if (showConsent) {
     if (settings.button != null && typeof settings.button == 'string') {
         let button = document.createElement('button');
         button.textContent = settings.button;
+        button.onclick = accepting();
         div.appendChild(button);
     }
 
