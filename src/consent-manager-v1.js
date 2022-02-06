@@ -152,12 +152,12 @@ if (showConsent) {
 
     //Basic Settings
     //1. Title
-    if (settings.title != null && settings.title == String) {
+    if (settings.title != null && typeof settings.title == 'string') {
         const title = document.createElement('h1');
         title.textContent = settings.title;
         div.appendChild(title);
     }
-    
+
     //2. Info Text
     //3. Button Text
 
