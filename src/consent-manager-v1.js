@@ -166,7 +166,14 @@ if (showConsent) {
         infoText.textContent = settings.infoText;
         div.appendChild(infoText);
     }
+
     //3. Button Text
+    Console.log(settings.button)
+    if (settings.button != null && typeof settings.button == 'string') {
+        let button = document.createElement('button');
+        button.textContent = settings.button;
+        div.appendChild(button);
+    }
 
     //First Test Data.
 
