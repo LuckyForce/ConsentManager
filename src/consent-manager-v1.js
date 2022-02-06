@@ -152,6 +152,7 @@ if (showConsent) {
 
     //Basic Settings
     //1. Title
+    Console.log(settings.title);
     if (settings.title != null && typeof settings.title == 'string') {
         const title = document.createElement('h1');
         title.textContent = settings.title;
