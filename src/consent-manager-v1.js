@@ -163,11 +163,11 @@ if (showConsent) {
     }
 
     //2. Info Text
-    Console.log(settings.infoText);
-    if (settings.infoText != null && typeof settings.infoText == 'string') {
-        let infoText = document.createElement('span');
-        infoText.textContent = settings.infoText;
-        div.appendChild(infoText);
+    Console.log(settings.info_text);
+    if (settings.info_text != null && typeof settings.info_text == 'string') {
+        let info_text = document.createElement('span');
+        info_text.textContent = settings.info_text;
+        div.appendChild(info_text);
     }
 
     //3. Button Text
