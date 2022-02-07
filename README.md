@@ -6,7 +6,7 @@ This is going to be a js script that is fully customizable to add a ConsentManag
 Plans: Fully customizable Consent Manager with token system.
 
 ## Version 2
-Plans: Support for multiple languages.
+Plans: Support for multiple languages and better customization for responsive applications.
 
 ## How do you add the ConsentManager to your website?
 
