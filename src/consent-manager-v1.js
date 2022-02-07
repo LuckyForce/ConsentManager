@@ -151,7 +151,7 @@ if (showConsent) {
     Console.log(settings);
 
     //Add necessary styles for the div
-    div.style.position = 'absolute';
+    div.style.position = 'fixed';
 
     //Basic Settings
     //1. Title
