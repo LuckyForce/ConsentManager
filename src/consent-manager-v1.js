@@ -154,6 +154,29 @@ if (showConsent) {
     div.style.position = 'fixed';
     div.style.padding = '10px';
 
+    //Position Settings
+    //Positioning is based on the settings.position property which is an exponential value.
+    //1 = Left
+    //2 = Right
+    //4 = Top
+    //8 = Bottom
+    //Together they can be used to position the div in the desired way.
+    if(settings.position == null || settings.position == ""){
+        settings.position = 11;
+    }
+    if (settings.position & 1) {
+        div.style.left = '0px';
+    }
+    if (settings.position & 2) {
+        div.style.right = '0px';
+    }
+    if (settings.position & 4) {
+        div.style.top = '0px';
+    }
+    if (settings.position & 8) {
+        div.style.bottom = '0px';
+    }
+
     //Basic Settings
     //1. Title
     Console.log(settings.title);
