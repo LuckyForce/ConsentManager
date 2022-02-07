@@ -4,6 +4,12 @@ In this README I will go through over every possible settings for the ConsentMan
 
 You can add any type of cookies to the ConsentManager using the settings.
 
+## Positioning
+1 - Left
+2 - Top
+3 - Right
+4 - Bottom
+
 ## Define Cookies
 
 ```html
