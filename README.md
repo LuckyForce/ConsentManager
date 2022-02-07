@@ -11,7 +11,6 @@ Plans: Support for multiple languages and better customization for responsive ap
 ## How do you add the ConsentManager to your website?
 
 ```html
-<div id="consent-manager"></div>
 <script
   src="https://www.adrian-schauer.at/projects/consent-manager/consent-manager-v1.min.js"
 >
