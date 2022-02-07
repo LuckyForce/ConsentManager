@@ -150,8 +150,9 @@ if (showConsent) {
     //Output Settings for Debug Reasons
     Console.log(settings);
 
-    //Add necessary styles for the div
+    //Add necessary styles for the div only using responsive values.
     div.style.position = 'fixed';
+    div.style.padding = '10px';
 
     //Basic Settings
     //1. Title
