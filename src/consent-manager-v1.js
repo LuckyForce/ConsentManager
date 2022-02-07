@@ -186,10 +186,17 @@ if (showConsent) {
     let token_valid = false;
     if (settings.token != null && typeof settings.token == 'string') {
         //fetch if token valid for this particular site
-        fetch("https://adrian-schauer.at/projects/consent-manager/api/v1/validateToken.php?token=" + settings.token + "&site=" + window.location.hostname)
+        Console.log("Fetching Token");
+        fetch("https://adrian-schauer.at/projects/consent-manager/api/v1/validateToken.php", {method: "POST", body: JSON.stringify({token: settings.token, site: window.location.hostname})})
             .then(response => response.json())
             .then(data => {
-
+                Console.log(data);
+                if (data.valid) {
+                    token_valid = true;
+                }
+            })
+            .catch(error => {
+                Console.error(error);
             });
     }
     //Generate powered by text
