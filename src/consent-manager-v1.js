@@ -206,7 +206,14 @@ if (showConsent) {
         div.appendChild(powered_by);
     }
 
-    //First Test Data.
+    //Basic Styles
+    //1. Background Color
+    Console.log(settings.background_color);
+    if (settings.background_color != null && typeof settings.background_color == 'string') {
+        div.style.backgroundColor = settings.background_color;
+    }else{
+        div.style.backgroundColor = "#6699cc";
+    }
 
     //Adding Div to Website Body.
     document.getElementsByTagName('body')[0].appendChild(div);
