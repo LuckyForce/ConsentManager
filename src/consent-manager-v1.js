@@ -166,7 +166,7 @@ if (showConsent) {
     Console.log(settings.info_text);
     if (settings.info_text != null && typeof settings.info_text == 'string') {
         let info_text = document.createElement('span');
-        info_text.textContent = settings.info_text;
+        info_text.innerHTML = settings.info_text;
         div.appendChild(info_text);
     }
 
