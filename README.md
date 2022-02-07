@@ -2,6 +2,12 @@
 
 This is going to be a js script that is fully customizable to add a ConsentManager to your website.
 
+## Version 1
+Plans: Fully customizable Consent Manager with token system.
+
+## Version 2
+Plans: Support for multiple languages.
+
 ## How do you add the ConsentManager to your website?
 
 ```html
