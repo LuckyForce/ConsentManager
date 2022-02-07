@@ -179,6 +179,24 @@ if (showConsent) {
         div.appendChild(button);
     }
 
+    //4. Cookie Types
+
+    //5. Powered by Text
+    Console.log(settings.token);
+    let token_valid = false;
+    if (settings.token != null && typeof settings.token == 'string') {
+        //fetch if token valid for this particular site
+        fetch("https://adrian-schauer.at/projects/consent-manager/api/v1/validateToken.php?token=" + settings.token + "&site=" + window.location.hostname)
+            .then(response => response.json())
+            .then(data => {
+
+            });
+    }
+    //Generate powered by text
+    if(!token_valid){
+
+    }
+
     //First Test Data.
 
     //Adding Div to Website Body.
