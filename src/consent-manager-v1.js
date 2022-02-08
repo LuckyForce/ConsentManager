@@ -239,6 +239,14 @@ if (showConsent) {
     }else{
         div.style.backgroundColor = "#6699cc";
     }
+    
+    //2. Text Color
+    Console.log(settings.text_color);
+    if (settings.text_color != null && typeof settings.text_color == 'string') {
+        div.style.color = settings.text_color;
+    }else{
+        div.style.color = "#000000";
+    }
 
     //Adding Div to Website Body.
     document.getElementsByTagName('body')[0].appendChild(div);
