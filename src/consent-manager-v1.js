@@ -153,6 +153,7 @@ if (showConsent) {
     //Add necessary styles for the div only using responsive values.
     div.style.position = 'fixed';
     div.style.padding = '10px';
+    div.style.margin = '10px';
 
     //Position Settings
     //Positioning is based on the settings.position property which is an exponential value.
