@@ -217,7 +217,7 @@ if (showConsent) {
     if (settings.token != null && typeof settings.token == 'string') {
         //fetch if token valid for this particular site
         Console.log("Fetching Token");
-        fetch("https://adrian-schauer.at/projects/consent-manager/api/v1/validateToken.php", {method: "POST", body: JSON.stringify({token: settings.token, site: window.location.hostname})})
+        await fetch("https://adrian-schauer.at/projects/consent-manager/api/v1/validateToken.php", {method: "POST", body: JSON.stringify({token: settings.token, site: window.location.hostname})})
             .then(response => response.json())
             .then(data => {
                 Console.log(data);
@@ -231,6 +231,7 @@ if (showConsent) {
             });
     }
     //Generate powered by text
+    Console.log(token_valid);
     if(!token_valid){
         let powered_by = document.createElement('span');
         powered_by.innerHTML = "Powered by <a href='https://adrian-schauer.at/projects/consent-manager/' target='_blank'>Consent Manager</a>";
