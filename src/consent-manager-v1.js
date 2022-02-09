@@ -154,7 +154,8 @@ if (showConsent) {
     div.style.position = 'fixed';
     div.style.padding = '10px';
     div.style.margin = '10px';
-
+    div.style.zIndex = '9999';
+    
     //Position Settings
     //Positioning is based on the settings.position property which is an exponential value.
     //1 = top
