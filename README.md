@@ -3,13 +3,19 @@
 
 This is going to be a js script that is fully customizable to add a ConsentManager to your website.
 
+## Used technologies
+ConsoleDebugManager - [https://github.com/LuckyForce/ConsoleDebugMode]
+
 ## Version 1
-Plans: Fully customizable Consent Manager with token system.
+Plans: Fully customizable Consent Manager.
+1. changed_text = "We changed our privacy policy. Please review our new policy."
+2. Cookies
+3. Buttons
 
 ## Version 2
 Plans: Support for multiple languages and better customization for responsive applications.
 
-## How do you add the ConsentManager to your website?
+## Installation
 
 ```html
 <script
