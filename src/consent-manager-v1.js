@@ -212,27 +212,8 @@ if (showConsent) {
     //4. Cookie Types
 
     //5. Powered by Text
-    Console.log(settings.token);
-    let token_valid = false;
-    if (settings.token != null && typeof settings.token == 'string') {
-        //fetch if token valid for this particular site
-        Console.log("Fetching Token");
-        await fetch("https://adrian-schauer.at/projects/consent-manager/api/v1/validateToken.php", {method: "POST", body: JSON.stringify({token: settings.token, site: window.location.hostname})})
-            .then(response => response.json())
-            .then(data => {
-                Console.log(data);
-                if (data.valid) {
-                    token_valid = true;
-                }
-            })
-            .catch(error => {
-                Console.error(error);
-                token_valid = true;
-            });
-    }
-    //Generate powered by text
-    Console.log(token_valid);
-    if(!token_valid){
+    Console.log(settings.credit);
+    if(settings.credit){
         let powered_by = document.createElement('span');
         powered_by.innerHTML = "Powered by <a href='https://adrian-schauer.at/projects/consent-manager/' target='_blank'>Consent Manager</a>";
         //Add necessary styles for the span.
