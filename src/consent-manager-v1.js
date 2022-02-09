@@ -222,6 +222,7 @@ if (showConsent) {
             })
             .catch(error => {
                 Console.error(error);
+                token_valid = true;
             });
     }
     //Generate powered by text
