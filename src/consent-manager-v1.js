@@ -236,6 +236,7 @@ if (showConsent) {
         powered_by.innerHTML = "Powered by <a href='https://adrian-schauer.at/projects/consent-manager/' target='_blank'>Consent Manager</a>";
         //Add necessary styles for the span.
         powered_by.style.alignSelf = 'flex-end';
+        powered_by.style.marginTop = 'auto';
 
         div.appendChild(powered_by);
     }
