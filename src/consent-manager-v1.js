@@ -155,7 +155,11 @@ if (showConsent) {
     div.style.padding = '10px';
     div.style.margin = '10px';
     div.style.zIndex = '9999';
-    
+    //Make div to align all children one under the other.
+    div.style.display = 'flex';
+    div.style.flexDirection = 'column';
+    div.style.alignItems = 'center';
+
     //Position Settings
     //Positioning is based on the settings.position property which is an exponential value.
     //1 = top
