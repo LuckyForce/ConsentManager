@@ -213,7 +213,7 @@ if (showConsent) {
 
     //5. Powered by Text
     Console.log(settings.credit);
-    if(settings.credit){
+    if(settings.credit == null || settings.credit){
         let powered_by = document.createElement('span');
         powered_by.innerHTML = "Powered by <a href='https://adrian-schauer.at/projects/consent-manager/' target='_blank'>Consent Manager</a>";
         //Add necessary styles for the span.
