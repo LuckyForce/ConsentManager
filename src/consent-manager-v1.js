@@ -144,6 +144,9 @@ if (window.localStorage.getItem("cookiesAcceptedOn") !== null) {
 //Creating Div to then display Consent.
 const div = document.createElement('div');
 
+//Get Body Element
+const body = document.getElementsByTagName("body")[0];
+
 //Only Show Consent if Consent was given before change of settings
 if (showConsent) {
     Console.log("Showing Consent");
@@ -167,7 +170,7 @@ if (showConsent) {
     //4 = bottom
     //8 = left
     //Together they can be used to position the div in the desired way.
-    if(settings.position == null || settings.position == ""){
+    if (settings.position == null || settings.position == "") {
         settings.position = 14;
     }
     if (settings.position & 1) {
@@ -213,7 +216,7 @@ if (showConsent) {
 
     //5. Powered by Text
     Console.log(settings.credit);
-    if(settings.credit == undefined || settings.credit == null || (typeof settings.credit == 'boolean' && settings.credit == true)){
+    if (settings.credit == undefined || settings.credit == null || (typeof settings.credit == 'boolean' && settings.credit == true)) {
         let powered_by = document.createElement('span');
         powered_by.innerHTML = "Powered by <a href='https://adrian-schauer.at/projects/consent-manager/' target='_blank'>Consent Manager</a>";
         //Add necessary styles for the span.
@@ -228,20 +231,38 @@ if (showConsent) {
     Console.log(settings.background_color);
     if (settings.background_color != null && typeof settings.background_color == 'string') {
         div.style.backgroundColor = settings.background_color;
-    }else{
+    } else {
         div.style.backgroundColor = "#6699cc";
     }
-    
+
     //2. Text Color
     Console.log(settings.text_color);
     if (settings.text_color != null && typeof settings.text_color == 'string') {
         div.style.color = settings.text_color;
-    }else{
+    } else {
         div.style.color = "#000000";
     }
 
+    //cover the whole screen
+    if (settings.cover != undefined && settings.cover != null && (typeof settings.cover == 'string' || typeof settings.cover == 'number')) {
+        const cover = document.createElement('div');
+        //Necessary Styles
+        cover.style.position = 'fixed';
+        cover.style.top = '0px';
+        cover.style.left = '0px';
+        cover.style.right = '0px';
+        cover.style.bottom = '0px';
+        if(typeof settings.cover == 'number')
+            cover.style.backgroundColor = 'rgba(0,0,0,' + settings.cover + ')';
+        else
+            cover.style.backgroundColor = settings.cover;
+        cover.style.zIndex = '9998';
+        //Add cover div to body
+        body.appendChild(cover);
+    }
+
     //Adding Div to Website Body.
-    document.getElementsByTagName('body')[0].appendChild(div);
+    body.appendChild(div);
 } else
     Console.log("Not Showing Consent");
 

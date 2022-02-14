@@ -9,8 +9,9 @@ ConsoleDebugManager - [https://github.com/LuckyForce/ConsoleDebugMode]
 ## Version 1
 Plans: Fully customizable Consent Manager.
 1. changed_text = "We changed our privacy policy. Please review our new policy."
-2. Cookies
-3. Buttons
+2. info_text = "We use cookies to improve your experience. By continuing to use our website, you agree to our use of cookies."
+3. button_text = "Got it!"
+4. cover = "rgba(0,0,0,0.5)" or 0.5
 
 ## Version 2
 Plans: Support for multiple languages and better customization for responsive applications.
