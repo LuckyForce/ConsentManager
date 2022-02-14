@@ -161,6 +161,7 @@ if (showConsent) {
     //Div Style
     div.style.position = "fixed";
     div.style.margin = '10px';
+    div.style.padding = '10px';
     div.style.zIndex = zIndex + 1;
     //Make div to align all children one under the other.
     div.style.display = 'flex';
