@@ -153,11 +153,14 @@ if (showConsent) {
     //Output Settings for Debug Reasons
     Console.log(settings);
 
-    //Add necessary styles for the div only using responsive values.
-    div.style.position = 'fixed';
-    div.style.padding = '10px';
+    //z-index for the div
+    let zIndex = 9999;
+    if(settings.zIndex !== undefined && settings.zIndex !== null && typeof settings.zIndex === "number")
+        zIndex = settings.zIndex;
+
+    //Div Style
     div.style.margin = '10px';
-    div.style.zIndex = '9999';
+    div.style.zIndex = zIndex+1;
     //Make div to align all children one under the other.
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
@@ -204,10 +207,10 @@ if (showConsent) {
     }
 
     //3. Button Text
-    Console.log(settings.button)
-    if (settings.button != null && typeof settings.button == 'string') {
+    Console.log(settings.button_text)
+    if (settings.button_text != null && typeof settings.button_text == 'string') {
         let button = document.createElement('button');
-        button.textContent = settings.button;
+        button.textContent = settings.button_text;
         button.onclick = accepting;
         div.appendChild(button);
     }
@@ -256,7 +259,7 @@ if (showConsent) {
             cover.style.backgroundColor = 'rgba(0,0,0,' + settings.cover + ')';
         else
             cover.style.backgroundColor = settings.cover;
-        cover.style.zIndex = '9998';
+        cover.style.zIndex = zIndex;
         //Add cover div to body
         body.appendChild(cover);
     }

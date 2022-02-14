@@ -7,13 +7,21 @@ This is going to be a js script that is fully customizable to add a ConsentManag
 ConsoleDebugManager - [https://github.com/LuckyForce/ConsoleDebugMode]
 
 ## Version 1
-Plans: Fully customizable Consent Manager.
-1. changed_text = "We changed our privacy policy. Please review our new policy."
-2. info_text = "We use cookies to improve your experience. By continuing to use our website, you agree to our use of cookies."
-3. button_text = "Got it!"
-4. cover = "rgba(0,0,0,0.5)" or 0.5
+Plans: Fully customizable Consent Manager. With one accept Button and one decline Button.
+1. changed_text
+2. info_text
+3. button_text
+4. cover
+5. zIndex
+6. background_color
+7. position
+8. consentInfoChangedOn
+9. text_color
 
 ## Version 2
+Plans: Fully customizable Consent Manager. With multiple cookie options and multiple accept Buttons.
+
+## Version 3
 Plans: Support for multiple languages and better customization for responsive applications.
 
 ## Installation
