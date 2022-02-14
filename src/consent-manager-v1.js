@@ -158,7 +158,7 @@ if (showConsent) {
     if (settings.zIndex !== undefined && settings.zIndex !== null && typeof settings.zIndex === "number")
         zIndex = settings.zIndex;
 
-    //Div Style
+    //Necessary Div Styles
     div.style.position = "fixed";
     div.style.margin = '10px';
     div.style.padding = '10px';
@@ -223,7 +223,7 @@ if (showConsent) {
     Console.log(settings.credit);
     if (settings.credit == undefined || settings.credit == null || (typeof settings.credit == 'boolean' && settings.credit == true)) {
         let powered_by = document.createElement('span');
-        powered_by.innerHTML = "Powered by <a href='https://adrian-schauer.at/projects/consent-manager/' target='_blank'>Consent Manager</a>";
+        powered_by.innerHTML = "Powered by <a href='https://github.com/LuckyForce/ConsentManager' target='_blank'>Consent Manager</a>";
         //Add necessary styles for the span.
         powered_by.style.alignSelf = 'flex-end';
         powered_by.style.marginTop = 'auto';
