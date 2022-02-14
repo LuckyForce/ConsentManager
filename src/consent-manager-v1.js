@@ -155,12 +155,13 @@ if (showConsent) {
 
     //z-index for the div
     let zIndex = 9999;
-    if(settings.zIndex !== undefined && settings.zIndex !== null && typeof settings.zIndex === "number")
+    if (settings.zIndex !== undefined && settings.zIndex !== null && typeof settings.zIndex === "number")
         zIndex = settings.zIndex;
 
     //Div Style
+    div.style.position = "fixed";
     div.style.margin = '10px';
-    div.style.zIndex = zIndex+1;
+    div.style.zIndex = zIndex + 1;
     //Make div to align all children one under the other.
     div.style.display = 'flex';
     div.style.flexDirection = 'column';
@@ -255,7 +256,7 @@ if (showConsent) {
         cover.style.left = '0px';
         cover.style.right = '0px';
         cover.style.bottom = '0px';
-        if(typeof settings.cover == 'number')
+        if (typeof settings.cover == 'number')
             cover.style.backgroundColor = 'rgba(0,0,0,' + settings.cover + ')';
         else
             cover.style.backgroundColor = settings.cover;
