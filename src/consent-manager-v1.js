@@ -130,7 +130,7 @@ if (window.localStorage.getItem("advertisingCookieAllowed") == true) {
     const advertisingCookieAllowed = false;
 }
 //Get Settings
-const s = ConsentManager.settings;
+const s = ConsentManager;
 
 let showConsent = false;
 if (window.localStorage.getItem("cookiesAcceptedOn") !== null) {
