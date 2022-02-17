@@ -34,7 +34,6 @@ Plans: Support for multiple languages and better customization for responsive ap
 ## Installation
 
 ```html
-<script src="https://www.adrian-schauer.at/projects/consent-manager/consent-manager-v1.min.js"></script>
 <script>
   //Settings
   const ConsentManager = {
@@ -43,4 +42,5 @@ Plans: Support for multiple languages and better customization for responsive ap
     button: "Accept",
   };
 </script>
+<script src="https://www.adrian-schauer.at/projects/consent-manager/consent-manager-v1.min.js"></script>
 ```
